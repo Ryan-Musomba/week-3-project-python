@@ -14,8 +14,7 @@ product_cards = soup.find_all('article', class_='prd')[:10]
 for product in product_cards:
     title = "Unknown"
     price = 0
-    
-    # Try multiple title tags
+ 
     title_tag = (product.find('h3', class_='name') or
                  product.find('div', class_='name') or
                  product.find('a', class_='core'))
